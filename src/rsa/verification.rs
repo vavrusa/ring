@@ -156,6 +156,14 @@ rsa_params!(
              `ring::signature`'s module-level documentation for more details."
 );
 rsa_params!(
+    RSA_PKCS1_1024_8192_SHA512_FOR_LEGACY_USE_ONLY,
+    1024,
+    &super::RSA_PKCS1_SHA512,
+    "Verification of signatures using RSA keys of 1024-8192 bits,
+             PKCS#1.5 padding, and SHA-512.\n\nSee \"`RSA_PKCS1_*` Details\" in
+             `ring::signature`'s module-level documentation for more details."
+);
+rsa_params!(
     RSA_PKCS1_2048_8192_SHA512,
     2048,
     &super::RSA_PKCS1_SHA512,

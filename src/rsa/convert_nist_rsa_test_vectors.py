@@ -207,7 +207,7 @@ def main(fn, test_type, padding_alg):
 
             print_sign_test(case, n, e, d, padding_alg)
         else:
-            legacy = case['SHAAlg'] in ["SHA1", "SHA256"]
+            legacy = case['SHAAlg'] in ["SHA1", "SHA256", "SHA512"]
             if (n.bit_length() < 2048 and not legacy) or n.bit_length() < 1024:
                 debug("Skipping due to modulus length (too small).", DEBUG)
                 continue
